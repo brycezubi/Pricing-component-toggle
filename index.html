@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+  <link rel="stylesheet" href="css/index.css">
+
+  <script src="js/index.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Our Pricing</h1>
+      <div class="toogle__price">
+        <input type="checkbox" id="toogle">
+        <span class="year">Annually</span>
+        <div class="toogle">
+          <label class="circle" for="toogle"></label>
+        </div>
+        <span class="month">Monthly</span>
+      </div>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <div class="card__title">Basic</div>
+        <p class="card__price card__price-m">&dollar; <span>19.99</span></p>
+        <p class="card__price card__price-y">&dollar; <span>199.99</span></p>
+
+        <ul class="card__content">
+          <li>500 GB Storage</li>
+          <li>2 Users Allowed</li>
+          <li>Send up to 3 GB</li>
+        </ul>
+
+        <button class="cta">Learn More</button>
+      </div>
+      <div class="card pro">
+        <div class="card__title ">Profesional</div>
+        <p class="card__price card__price--m card__price-m">&dollar; <span>24.99</span></p>
+        <p class="card__price card__price--m card__price-y">&dollar; <span>249.99</span></p>
+
+
+        <ul class="card__content">
+          <li>1 TB Storage</li>
+          <li>5 Users Allowed</li>
+          <li>Send up to 10 GB</li>
+        </ul>
+
+        <button class="cta cta-m">Learn More</button>
+      </div>
+      <div class="card">
+        <div class="card__title">Master</div>
+        <p class="card__price card__price-m">&dollar; <span>39.99</span></p>
+        <p class="card__price card__price-y">&dollar; <span>399.99</span></p>
+
+        <ul class="card__content">
+          <li>2 TB Storage</li>
+          <li>10 Users Allowed</li>
+          <li>Send up to 20 GB</li>
+        </ul>
+
+        <button class="cta">Learn More</button>
+      </div>
+    </section>
+  </main>
+ 
+</body>
+</html>

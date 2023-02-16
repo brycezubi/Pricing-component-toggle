@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@700&display=swap');
+:root{
+
+  --Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+  --Very-LightGrayishBlue: hsl(240, 78%, 98%);
+  --Light-GrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+
+body{
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--Very-LightGrayishBlue);
+  background-image: url(../images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  object-fit: cover;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: calc(100% - 15%);
+  max-width: 120rem;
+  text-align: center;
+  padding-block: 4rem;
+}
+
+header{
+  max-width: 45rem;
+  margin-inline: auto;
+}
+
+header h1{
+  color: var(--GrayishBlue);
+  margin-bottom: 4rem;
+}
+
+.toogle__price{
+  display: flex;
+  gap: 2.5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--Light-GrayishBlue);
+
+}
+.toogle{
+  width: 55px;
+  height: 28px;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg ,hsl(236, 72%, 79%) , 40% ,hsl(237, 63%, 64%));
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-inline: 0.5rem;
+  transition: 0.3s;
+  opacity: .8;
+}
+.circle{
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.month{
+  color: var(--DarkGrayishBlue);
+}
+
+input[type="checkbox"]{
+  display:none;
+}
+
+input[type="checkbox"]:checked ~ .toogle{
+  justify-content: flex-start;
+  opacity: 1;
+}
+input[type="checkbox"]:checked ~ .year{
+  color: var(--DarkGrayishBlue);
+}
+input[type="checkbox"]:checked ~ .month{
+  color: var(--Light-GrayishBlue);
+
+}
+
+
+
+.cards{
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+ row-gap: 2rem;
+ align-self: center;
+}
+
+.card{  
+  padding: 2rem 2.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: var(--GrayishBlue);
+  max-width: 40rem;
+  border-radius: 0.85rem;
+}
+
+.card__price{
+  color: var(--DarkGrayishBlue);
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.card__price span{
+  font-size: 5.5rem;
+}
+
+.card__price-y{
+  display: none;
+}
+
+.card__content{
+  border-block: 1px solid var(--Light-GrayishBlue);
+  padding-block: 1.5rem;
+}
+
+.card__content li:nth-child(2){
+  border-block: 1px solid var(--Light-GrayishBlue);
+  padding-block: 1rem;
+}
+.card__content li:nth-child(1){
+  padding-block-end: 1rem;
+}
+.card__content li:nth-child(3){
+  padding-block-start: 1rem;
+}
+
+
+.cta{
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 1.15rem;
+  background-color: hsl(237, 63%, 64%);
+  border: 1px solid transparent;
+  outline: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 0.9rem;
+
+}
+
+.cta:hover{
+  background-color: transparent;
+  border: 1px solid hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+}
+
+.pro{
+  background-color: hsl(237, 63%, 64%);
+  color: white;
+}
+
+.card__price--m{
+  color: white;
+}
+
+
+.cta-m{
+  background-color: white;
+  color: hsl(237, 63%, 64%);
+}
+.cta-m:hover{
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+@media (min-width:860px){
+  body{
+    background-image: url(../images/bg-bottom.svg) , url(../images/bg-top.svg);
+    background-position: bottom left , top right;
+  }
+  
+  .cards{
+    align-self: auto;
+  }
+}
+
+@media (min-width:1200px){
+  main{
+    gap: 8rem;
+  }
+  .card:nth-child(2){
+    margin-block: -2rem;
+    padding-top: 4rem;
+  }
+}
